@@ -40,17 +40,15 @@ public class MainActivity extends AppCompatActivity {
         rvItems.setLayoutManager(new LinearLayoutManager(this));
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String todoItem = etItem.getText().toString();
-                items.add(todoItem);
-                itemsAdapter.notifyItemInserted(items.size()-1);
-                etItem.setText("");
-                Toast.makeText(getApplicationContext(), "item was added", Toast.LENGTH_SHORT).show();
-            }
-
-            );
-
+                                      @Override
+                                      public void onClick(View v) {
+                                          String todoItem = etItem.getText().toString();
+                                          items.add(todoItem);
+                                          itemsAdapter.notifyItemInserted(items.size() - 1);
+                                          etItem.setText("");
+                                          Toast.makeText(getApplicationContext(), "item was added", Toast.LENGTH_SHORT).show();
+                                      }
+                                  }
+        );
     }
-
-    }
+}
